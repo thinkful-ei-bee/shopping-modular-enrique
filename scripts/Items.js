@@ -4,14 +4,14 @@
 const Item = (function(){
 
 function validateName(name){
-    if(!name){
+    if(name === ''){
         throw TypeError ("Name does not exist!");
     }
 }
 
 function create(name){
     return {
-        id: cuid(),
+    id: cuid(),
     name: name,
     checked: false,
     };
